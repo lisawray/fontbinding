@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textViewStyle">@style/MyTextViewStyle</item>
+    </style>
+
+    <style name="MyTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:lineSpacingMultiplier">0.8</item>
+    </style>
+
+</resources>
