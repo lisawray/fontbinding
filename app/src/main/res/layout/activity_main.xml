@@ -33,19 +33,19 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:font="@{`alegreya_bold`}"
+                app:font="@{`alegreya-bold`}"
                 android:text="@string/example"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:font="@{`alegreya_italic`}"
+                app:font="@{`alegreya-italic`}"
                 android:text="@string/example"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:font="@{`alegreya_bold_italic`}"
+                app:font="@{`alegreya-bolditalic`}"
                 android:text="@string/example"/>
 
         </LinearLayout>
