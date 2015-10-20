@@ -9,7 +9,6 @@ public class Application extends android.app.Application {
     public void onCreate(){
         super.onCreate();
         Application.context = getApplicationContext();
-        FontCache.getInstance().addFont("alegreya", "Alegreya-Regular.ttf");
     }
 
     public static Context getAppContext() {
