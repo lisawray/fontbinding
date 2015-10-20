@@ -1,5 +1,5 @@
 # fontbinding
-An example of custom fonts in XML using [data binding](http://developer.android.com/tools/data-binding/guide.html).
+A full example of custom fonts in XML using [data binding](http://developer.android.com/tools/data-binding/guide.html).
 
 ```xml
 <TextView
