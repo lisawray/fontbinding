@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FontCache.getInstance().addFont("alegreya", "Alegreya-Regular.ttf");
+        FontCache.getInstance(this).addFont("alegreya", "Alegreya-Regular.ttf");
 
         DataBindingUtil.setContentView(this, R.layout.activity_main);
     }

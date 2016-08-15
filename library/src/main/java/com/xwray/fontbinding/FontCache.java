@@ -1,5 +1,6 @@
 package com.xwray.fontbinding;
 
+import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Typeface;
 import android.util.Log;
@@ -25,10 +26,11 @@ public class FontCache {
     private static Map<String, Typeface> cache = new HashMap<>();
     private static Map<String, String> fontMapping = new HashMap<>();
     private static FontCache instance;
+    private Context mContext;
 
-    public static FontCache getInstance() {
+    public static FontCache getInstance(Context context) {
         if (instance == null) {
-            instance = new FontCache();
+            instance = new FontCache(context.getApplicationContext());
         }
         return instance;
     }
@@ -37,8 +39,9 @@ public class FontCache {
         fontMapping.put(name, fontFilename);
     }
 
-    private FontCache() {
-        AssetManager am = Application.getAppContext().getResources().getAssets();
+    private FontCache(Context context) {
+        mContext = context;
+        AssetManager am = context.getResources().getAssets();
         String fileList[];
         try {
             fileList = am.list(FONT_DIR);
@@ -63,7 +66,7 @@ public class FontCache {
         if (cache.containsKey(fontFilename)) {
             return cache.get(fontFilename);
         } else {
-            Typeface typeface = Typeface.createFromAsset(Application.getAppContext().getAssets(), FONT_DIR + "/" + fontFilename);
+            Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), FONT_DIR + "/" + fontFilename);
             cache.put(fontFilename, typeface);
             return typeface;
         }
