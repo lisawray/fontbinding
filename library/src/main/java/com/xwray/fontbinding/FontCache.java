@@ -60,8 +60,8 @@ public class FontCache {
             Log.e(TAG, "Couldn't find font " + fontName + ". Maybe you need to call addFont() first?");
             return null;
         }
-        if (cache.containsKey(fontName)) {
-            return cache.get(fontName);
+        if (cache.containsKey(fontFilename)) {
+            return cache.get(fontFilename);
         } else {
             Typeface typeface = Typeface.createFromAsset(Application.getAppContext().getAssets(), FONT_DIR + "/" + fontFilename);
             cache.put(fontFilename, typeface);
