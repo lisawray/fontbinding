@@ -11,6 +11,6 @@ public class Bindings {
 
     @BindingAdapter({"bind:font"})
     public static void setFont(TextView textView, String fontName) {
-        textView.setTypeface(FontCache.getInstance(textView.getContext()).get(fontName));
+        textView.setTypeface(FontCache.get(textView.getContext(), fontName));
     }
 }
