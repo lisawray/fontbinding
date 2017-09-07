@@ -1,3 +1,7 @@
+## [Deprecated]
+Fonts in XML are now supported by the Android support library as of 26.0, including in styles and themes. I recommend using the support library and IDE integration for all your modern font needs! 
+https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html#using-support-lib
+
 # fontbinding
 Easy custom fonts in XML using [data binding](http://developer.android.com/tools/data-binding/guide.html).
 
